@@ -75,7 +75,7 @@ class WeatherReport extends React.Component {
                     <div>
                     <div className="Header-container">
                                 <p>
-                                    Current Location:{this.state.loco.name}, Temperature: <img alt="description of image"  src={this.state.image} />  {this.state.currentObservation.temperature}
+                                    Current Location:{this.state.loco.name}, Temperature: <img alt="description of image"  src={this.state.image} />  {this.state.currentObservation.temperature}&deg;
                                 </p>
                                 {/* <SearchBar /> */}
                 
@@ -89,7 +89,7 @@ class WeatherReport extends React.Component {
                                 </form>
                                 <div className="inner-nav">
                                     <button onClick={() => this.props.history.push(hourly)} className="btn">Hourly</button>
-                                    <button onClick={() => this.props.history.push(daily    )} className="btn" >Daily</button>
+                                    <button onClick={() => this.props.history.push(daily )} className="btn" >Daily</button>
                                 </div>
                                 <div className='CurrentLocoWeather' >
                                     <CurrentLocoWeather loco={this.state.loco} currentObservation={this.state.currentObservation} imageIcon={this.state.image} sundata={this.state.sunData} />

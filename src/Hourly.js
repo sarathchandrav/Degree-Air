@@ -45,15 +45,15 @@ class Hourly extends React.Component {
                                     return (
                                         <div id="card-hourly" key={idx} className="card">
                                             <div className="header">Date/Time<br/>{d.dt_txt}</div>
-                                            <h2>{Math.round(d.main.temp - 273)} Degree</h2>
+                                            <h2>{Math.round(d.main.temp - 273)}&deg;</h2>
                                             <img alt="description of image" src={Src + d.weather[0].icon + ".png"}/>
                                             <div className="description">
                                                 Feels Like <br/>
-                                                {d.main.feels_like}
+                                                {d.main.feels_like}&deg;
                                                 <hr/>
                                                 Maximum/Minimun <br/>
-                                                max:{d.main.temp_max}<br/>
-                                                min:{d.main.temp_min}
+                                                max:{d.main.temp_max}&deg;<br/>
+                                                min:{d.main.temp_min}&deg;
                                                 <hr/>
                                                 <div className="j">
                                                     Pressure<br/>
@@ -64,7 +64,7 @@ class Hourly extends React.Component {
                                                     <hr/>
                                                     Wind<br/>
                                                     Speed: {d.wind.speed}<br/>
-                                                    wind degree: {d.wind.deg}
+                                                    wind degree: {d.wind.deg}&deg;
                                                 </div>
                                             </div>
                                         </div>

@@ -60,11 +60,11 @@ class inputLocationWeather extends React.Component {
                                                 }}>
                                                 <h1 style={{
                                                     marginBottom:'0px'
-                                                }}>{this.state.resp.current.temperature}</h1>
+                                                }}>{this.state.resp.current.temperature}&deg;</h1>
                                                 <div className="description">
                                                     {this.state.resp.current.weather_descriptions[0]}<br/>
-                                                    Feels Like {this.state.resp.current.feelslike}<br/>
-                                                    Feel Under Shade{this.state.resp.current.temperature - 2}<br />
+                                                    Feels Like {this.state.resp.current.feelslike}&deg;<br/>
+                                                    Feel Under Shade{this.state.resp.current.temperature - 2}&deg;<br />
                                                     UV index {this.state.resp.current.uv_index }  
                                                 </div>
                                             </span>

@@ -28,7 +28,7 @@ var config = {
                 }]
                },
             {
-                test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
+                test: /\.(png|svg|jpg|jpeg|gif|ico)?$/,
                 use: [
                     {
                       loader: 'url-loader',

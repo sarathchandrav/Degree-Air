@@ -30,18 +30,18 @@ const WeatherCard = (props) => {
                     <img className="weatherIcon" alt="description of image" src={props.loco.imageIcon}/>
                 </span>
                 <span className="tempDiv">
-                    {props.loco.currentObservation.temperature}
+                    {props.loco.currentObservation.temperature}&deg;
                 </span>
                 <div className="realfeelDiv">
-                    Real feel {props.loco.currentObservation.feelslike}<br />
-                    Real Feel Shaded {props.loco.currentObservation.temperature - 2}
+                    Real feel {props.loco.currentObservation.feelslike}&deg;<br />
+                    Real Feel Shaded {props.loco.currentObservation.temperature - 2}&deg;
                 </div>
             </span>
             <span className="infoDiv">
                 <div className='moreinfo'>
-                    Temperature:    {props.loco.currentObservation.temperature}<br /><br />
+                    Temperature:    {props.loco.currentObservation.temperature}&deg;<br /><br />
                     Wind Speed:     {props.loco.currentObservation.wind_speed}<br /><br />
-                    Wind Degree:    {props.loco.currentObservation.wind_degree}<br /><br />
+                    Wind Degree:    {props.loco.currentObservation.wind_degree}&deg;<br /><br />
                     Wind Direction: {props.loco.currentObservation.wind_dir}<br /><br />
                     Pressure:       {props.loco.currentObservation.pressure}<br /><br />
                     Humidity:       {props.loco.currentObservation.humidity}<br /><br />
