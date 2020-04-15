@@ -39,15 +39,16 @@ const Text = styled.p`font-size:larger;
                     `
 
 class AirQuality extends React.Component {
-    state = { loading: true }
+    state = { loading: true, resp:null }
     componentDidMount() {
         this.props.fetchAPI();
-        setTimeout(
-            function () {
-                this.setState({ loading: false });
-            }.bind(this),
-            3000
-        );
+        // setTimeout(
+        //     function () {
+        //         this.setState({ loading: false });
+        //     }.bind(this),
+        //     3000
+        // );
+        this.setState({ resp: this.props.posts, loading: false })
     }
 
     renderList() {
@@ -99,7 +100,7 @@ class AirQuality extends React.Component {
     render() {
         return (
             <div className="mainContainer">
-                {!this.props.posts || this.state.loading ? (
+                {!this.state.resp || this.state.loading ? (
                     <div style={{ height: '100vh', width: '100%' }} className="ui segment">
                         <div className="ui active dimmer">
                             <div className="ui text loader">Loading</div>
